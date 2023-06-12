@@ -1,28 +1,10 @@
-public class Hogwarts {
-    private int nobility;
-    private int honor;
-    private int courage;
+class Hogwarts {
     private int magicPower;
     private int transgressionDistance;
 
-    public Hogwarts(int nobility, int honor, int courage, int magicPower, int transgressionDistance) {
-        this.nobility = nobility;
-        this.honor = honor;
-        this.courage = courage;
+    public Hogwarts(int magicPower, int transgressionDistance) {
         this.magicPower = magicPower;
         this.transgressionDistance = transgressionDistance;
-    }
-
-    public int getNobility() {
-        return nobility;
-    }
-
-    public int getHonor() {
-        return honor;
-    }
-
-    public int getCourage() {
-        return courage;
     }
 
     public int getMagicPower() {
@@ -33,23 +15,21 @@ public class Hogwarts {
         return transgressionDistance;
     }
 
-    public void setNobility(int nobility) {
-        this.nobility = nobility;
-    }
+    public void compareMagicPowerAndTransgressionDistance(Hogwarts otherStudent) {
+        if (this.magicPower > otherStudent.magicPower) {
+            System.out.println("Этот студент обладает большей магической силой");
+        } else if (this.magicPower < otherStudent.magicPower) {
+            System.out.println("У другого студента магическая сила больше");
+        } else {
+            System.out.println("Студенты имеют одинаковую магическую силу");
+        }
 
-    public void setHonor(int honor) {
-        this.honor = honor;
-    }
-
-    public void setCourage(int courage) {
-        this.courage = courage;
-    }
-
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
-
-    public void setTransgressionDistance(int transgressionDistance) {
-        this.transgressionDistance = transgressionDistance;
+        if (this.transgressionDistance > otherStudent.transgressionDistance) {
+            System.out.println("Этот студент имеет большую дальность трансгрессии");
+        } else if (this.transgressionDistance < otherStudent.transgressionDistance) {
+            System.out.println("Другой студент имеет большую дальность трансгрессии");
+        } else {
+            System.out.println("Студенты имеют одинаковую дальность трансгрессии");
+        }
     }
 }
