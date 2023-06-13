@@ -17,4 +17,8 @@ class Slytherin extends Hogwarts {
     public int getSlytherinScore() {
         return cunning + determination + ambition + resourcefulness + thirstForPower;
     }
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Хитрость: " + cunning + ", решительность: " + determination + ", амбициозность: " + ambition + ", находчивость:" + resourcefulness + ", жажда власти:" + thirstForPower;
+    }
 }

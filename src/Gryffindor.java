@@ -13,4 +13,8 @@ class Gryffindor extends Hogwarts {
     public int getGryffindorScore() {
         return nobility + honor + bravery;
     }
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Благородство: " + nobility + ", честь: " + honor + ", отвага: " + bravery;
+    }
 }

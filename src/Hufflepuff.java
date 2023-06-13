@@ -13,4 +13,8 @@ class Hufflepuff extends Hogwarts {
     public int getHufflepuffScore() {
         return hardworking + loyal + honest;
     }
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Трудолюбие: " + hardworking + ", верность: " + loyal + ", честность: " + honest;
+    }
 }

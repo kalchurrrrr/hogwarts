@@ -15,4 +15,8 @@ class Ravenclaw extends Hogwarts {
     public int getRavenclawScore() {
         return smart + wise + witty + creative;
     }
+    @Override
+    public String getDescription() {
+        return super.getDescription() + ", Ум: " + smart + ", мудрость: " + wise + ", остроумие: " + witty + ", креатив:" + creative;
+    }
 }
